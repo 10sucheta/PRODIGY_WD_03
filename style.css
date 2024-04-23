@@ -15,7 +15,7 @@ body {
   }
   
   .container {
-    max-width: 400px;
+    max-width: 800px;
     margin: 50px auto;
     text-align: center;
     width:900px;
@@ -41,12 +41,13 @@ body {
     max-width: 300px;
     border-radius: 10px;
    border-color: black;
+   
   }
   
   .cell {
     width: 100px;
     height: 100px;
-    background-color: #fff;
+    background: linear-gradient(135deg, #ffffff, #b6b2bd, #aaa4a6, #ffffff);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,6 +55,7 @@ body {
     color: #333;
     cursor: pointer;
     border-radius: 5px;
+    border: 8px solid #000000; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
   }
