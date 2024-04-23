@@ -29,7 +29,7 @@ body {
   
   h1 {
     font-size: 2.5em;
-    color: #333;
+    color: #ffffff;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   }
   
@@ -190,7 +190,12 @@ body {
   }
 }
 
-
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .winning-cell::after {
+    font-size: 1em; /* Adjust the font size for smaller screens */
+  }
+}
 
 /* Extra */
 /*  
