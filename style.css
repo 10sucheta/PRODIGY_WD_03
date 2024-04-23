@@ -1,0 +1,229 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: linear-gradient(135deg, #ff5500, #ff0055, #5500ff, #0055ff);
+  overflow: hidden;
+  position: relative; 
+   
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    width:900px;
+    background: linear-gradient(135deg, #0055ff, #5500ff, #ff0055, #ff5500);
+    border: Black;
+   border-radius: 80px;
+   border-color: black;
+   
+   border: 2px solid #000000; 
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #333;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 10px;
+   border-color: black;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+  }
+  
+  .cell:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .status {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .game-modes {
+    margin-bottom: 20px;
+  }
+  
+  .game-modes button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .game-modes button:hover {
+    background-color: #2980b9;
+  }
+  
+  .restart {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .restart:hover {
+    background-color: #555;
+  }
+  
+  .winning-line {
+  animation: highlight 0.5s linear infinite alternate;
+}
+
+@keyframes winning-animation {
+  0% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: gold;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+.cell.winning-cell {
+  animation: winning-animation 1s;
+}
+
+/* Define the heart animation */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+.winning-cell::after {
+  content: "\2665"; /* Heart symbol */
+  display: inline-block;
+  font-size: 2em;
+  color: red;
+  animation: heartbeat 0.5s;
+}
+
+#score {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#score div {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+#score span {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+ 
+  
+  
+/* For screens smaller than 600px (typical mobile devices) */
+
+@media only screen and (max-width: 600px) {
+ 
+  .game-board {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3px;
+    max-width: 200px;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+
+
+  .status {
+    font-size: 1em;
+  }
+
+
+  button {
+    padding: 5px 10px;
+    font-size: 0.8em;
+  }
+
+  
+  .container {
+    margin: 20px auto;
+    width: 90%;
+  }
+}
+
+
+
+/* Extra */
+/*  
+.player-names {
+  margin-top: 20px;
+  text-align: center;
+}
+
+label {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+input {
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+} */
